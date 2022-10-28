@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travis Ishihara</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <img src="images/initialsTI.png" class="logo">
+            <ul>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="detail">
+            <h1>Hi, I'm Travis Ishihara</h1>
+            <p>This is my website
+                <br> Details and work experience
+            </p>
+        <a href="">DOWNLOAD CV</a>    
+        </div>
+        <div class="images">
+            <img src="images/travis.png" alt="">
+        </div>
+    </div>
+<div id="about">
+    <div class="about-container">
+        <div class="row">
+            <div class="about-col-1"></div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> My name is Travis Ishihara from Honolulu, Hawaii.
+                    I attend Seattle University in Seattle Washington.
+                    Currently, I am a fourth year pursuing a degree in
+                    Computer Science and a minor in Data Science.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>Seattle University</span><br>B.S Computer Science</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>September 2022 - Current</span><br>SDI Engineering<br>Senior Capstone Project</li>
+                            <li><span>July 2022 - September 2022</span><br>CVS Health<br>Front-Store Associate</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>C++</span></li>
+                            <li><span>C#</span></li>
+                            <li><span>Python</span></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="contact-container">
+        <div class="row">
+            <div class="contact-left">
+                    <h1 class="sub-title-contact">Contact Me</h1>
+                    <p>Email: ishiharatrav@seattleu.edu</p>
+            </div>
+            <div class="contact-right"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
